@@ -1120,7 +1120,7 @@ footer .footer__copy p {
 .carousel-content .col-lg-12 {
   max-width: 460px;
 }
-.carousel-content h2 {
+.carousel-content h2, .carousel-content h1 {
   color: #fff;
   font-size: 2.5rem;
   font-weight: 700;
@@ -1184,6 +1184,16 @@ footer .footer__copy p {
   }
   .topbar__container {
     display: none;
+  }
+}
+@media (min-width: 1600px) {
+  .carousel-content {
+    bottom: 340px;
+  }
+}
+@media (min-width: 1900px) {
+  .carousel-content {
+    bottom: 540px;
   }
 }
 
