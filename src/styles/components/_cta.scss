@@ -1,0 +1,96 @@
+.cta__container{
+    background-color: #878787;
+    position: relative;
+    z-index: 20;
+    .cta__info{
+        padding: 25px 40px 0 40px;
+        border-bottom: 8px solid #090728;
+        h2{
+            font-family: $primaryFont;
+            color: #fff;
+            font-weight: 700;
+            font-size: 32px;
+            letter-spacing: -0.01em;
+            padding: 0;
+            margin: 0;
+        }
+        h3{
+            font-family: $primaryFont;
+            color: #fff;
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.01em;
+            padding-top: 16px;
+            margin: 0;
+        }
+        p{
+            font-family: $primaryFont;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+            color: #fff;
+            padding-top: 16px;
+        }
+    }
+    .cta__line{
+        background-color: rgba(40, 71, 85, 0.589);
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 !important;
+        position: absolute;
+        bottom: 0;
+        a{
+            background-color: $primaryColor;
+            padding: 12px 40px;
+            border-bottom-left-radius: 30px;
+            color: #fff;
+            font-family: $primaryFont;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border: 1px solid transparent;
+            transition: 0.2s;
+            &:hover{
+                background-color: #fff;
+                border: 1px solid $primaryColor;
+                color: $primaryColor;
+            }
+        }
+    }
+
+}
+.infos__container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 170px;
+    .container{
+        position: absolute;
+        top:-50px;
+        background-color: $primaryColor;
+        padding: 20px 30px;
+        border-radius: 20px;
+        .infos__block{
+            padding: 20px;
+            .info__detail{
+                h2{
+                    color: #fff;
+                    font-size: 20px;
+                    font-family: $primaryFont;
+                    font-weight: 800;
+                }
+            }
+            .info__text{
+                color: #fff;
+                font-family: $primaryFont;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .infos__container{
+        padding-bottom: 40px;
+    }
+}

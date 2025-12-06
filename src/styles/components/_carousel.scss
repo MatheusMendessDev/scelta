@@ -1,0 +1,153 @@
+@media(min-width:978px){
+    .carousel-indicators{
+        right: unset;
+        flex-direction: column;
+        bottom: 150px !important;
+        margin-left: 7% !important;
+        button{
+            height: 15px !important;
+            width: 15px !important;
+            background-color: #fff !important;
+            opacity: 1 !important;
+            transform: rotate(45deg);
+        }
+        .active{
+            background-color: $primaryColor !important;
+        }
+    }
+}
+.carousel-inner{
+    max-height: 620px;
+    position: relative;
+}
+
+// Carousel fade animation (instead of slide)
+.carousel-fade {
+    .carousel-item {
+        opacity: 0;
+        transition-property: opacity;
+        transform: none;
+    }
+    
+    .carousel-item.active,
+    .carousel-item-next.carousel-item-start,
+    .carousel-item-prev.carousel-item-end {
+        opacity: 1;
+    }
+    
+    .active.carousel-item-start,
+    .active.carousel-item-end {
+        opacity: 0;
+    }
+}
+
+// Carousel content positioning
+.carousel-item {
+    position: relative;
+    
+    img {
+        display: block;
+    }
+}
+
+.carousel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    animation: fadeInRight 1s ease-in-out;
+    
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .row {
+        width: 100%;
+    }
+    .col-lg-12{
+        max-width: 460px;
+    }
+    
+    h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    p {
+        color: #fff;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    a {
+        background-color: $primaryColor;
+        color: #fff;
+        padding: 0.75rem 2rem;
+        text-decoration: none;
+        border-radius: 15px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background-color: darken($primaryColor, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #fff !important;
+        }
+    }
+}
+
+// FadeInRight animation
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 977px) {
+    .carousel-content {
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+@media(max-width:768px){
+    .infos__container .container{
+        position: relative;
+        margin-top: 40px;
+        top: unset;
+    }
+    .carousel-content{
+        bottom: 20px;
+    }
+    .carousel-content h2 {
+        font-size: 1.6rem;
+      }
+    .carousel-content p {
+        font-size: .75rem;
+      }
+      .topbar__container{
+        display: none;
+      }
+}

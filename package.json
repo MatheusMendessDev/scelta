@@ -1,0 +1,25 @@
+{
+  "name": "scelta",
+  "version": "1.0.0",
+  "description": "Scelta Planejados website",
+  "scripts": {
+    "sass": "sass src/styles/style.scss dist/style.css",
+    "sass:watch": "sass --watch src/styles/style.scss dist/style.css",
+    "sass:prod": "sass src/styles/style.scss dist/style.css --style=compressed --no-source-map",
+    "build": "npm run sass:prod",
+    "dev": "npm run sass:watch"
+  },
+  "keywords": [
+    "scelta",
+    "planejados"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "wow.js": "^1.2.2"
+  }
+}

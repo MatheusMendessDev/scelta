@@ -1,0 +1,183 @@
+.contact__container{
+    padding: 80px 0;
+    background-color: #f8f8f8;
+    
+    .contact__heading{
+        font-family: $primaryFont;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        color: $primaryColor;
+        margin-bottom: 50px;
+    }
+    
+    .contact__form{
+        max-width: 800px;
+        margin: 0 auto;
+        
+        .contact__label{
+            display: block;
+            font-family: $primaryFont;
+            font-weight: 600;
+            color: $black;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .contact__input,
+        .contact__textarea{
+            width: 100%;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-family: $primaryFont;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            
+            &:focus{
+                outline: none;
+                border-color: $primaryColor;
+                box-shadow: 0 0 0 3px rgba(100, 3, 3, 0.1);
+            }
+            
+            &:invalid:not(:placeholder-shown){
+                border-color: #dc3545;
+            }
+            
+            &:valid:not(:placeholder-shown){
+                border-color: #28a745;
+            }
+            
+            &.error{
+                border-color: #dc3545;
+                box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+            }
+            
+            &.valid{
+                border-color: #28a745;
+            }
+            
+            &::placeholder{
+                font-family: $primaryFont;
+                color: #999;
+            }
+        }
+        
+        .contact__textarea{
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact__error{
+            display: block;
+            color: #dc3545;
+            font-size: 14px;
+            font-family: $primaryFont;
+            margin-bottom: 15px;
+            min-height: 20px;
+        }
+        
+        .contact__submit{
+            background-color: $primaryColor;
+            font-family: $primaryFont;
+            padding: 15px 50px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            
+            &:hover:not(:disabled){
+                background-color: darken($primaryColor, 10%);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(100, 3, 3, 0.3);
+            }
+            
+            &:active:not(:disabled){
+                transform: translateY(0);
+            }
+            
+            &:disabled{
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+        
+        .contact__success{
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            color: #155724;
+            font-family: $primaryFont;
+            font-size: 16px;
+            text-align: center;
+            
+            i{
+                margin-right: 8px;
+                color: #28a745;
+            }
+        }
+        
+        .contact__error-message{
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            color: #721c24;
+            font-family: $primaryFont;
+            font-size: 16px;
+            text-align: center;
+            
+            i{
+                margin-right: 8px;
+                color: #dc3545;
+            }
+        }
+        
+        .contact__honeypot{
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__container{
+        padding: 60px 0;
+        
+        .contact__heading{
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        
+        .contact__form{
+            .contact__input,
+            .contact__textarea{
+                padding: 12px 15px;
+                font-size: 16px;
+            }
+            
+            .contact__submit{
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+    }
+}

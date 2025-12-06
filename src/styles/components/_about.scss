@@ -1,0 +1,239 @@
+.about__container{
+    padding: 80px 0;
+    h2{
+        font-size: 32px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+    }
+    .about__info{
+        img{
+            padding-bottom: 16px;
+            max-width: 100%;
+            height: auto;
+            p{
+                font-family: $primaryFont;
+                font-size: 18px;
+                letter-spacing: -0.01em;
+                color: $black;
+            }
+        }
+    }
+    .about__blocks{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 40px;
+        padding-top: 20px;
+        .about__block{
+            
+            display: flex;
+            width: 50%;
+            margin-bottom: 32px;
+            .about__image{
+                background-color: $primaryColor;
+                width: 180px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                margin-right: 10px;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    width: 50px;
+                    filter: invert(100%);
+                }
+            }
+            h2{
+                color: $primaryColor;
+                font-weight: 700;
+                font-family: $primaryFont;
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            p{
+                font-family: $primaryFont;
+                color: $black;
+                line-height: 20px;
+                font-size: 16px;
+            }
+        }
+        .about__action{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            a{
+                width: 80%;
+                text-align: center;
+                background-color: $primaryColor;
+                color: #fff;
+                font-family: $primaryFont;
+                font-size: 24px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 900;
+                padding: 10px 0;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+.primary__button{
+    background-color: $primaryColor;
+    padding: 8px 30px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 8px;
+    display: inline-block;
+    &:hover{
+        color: #fff;
+    }
+}
+.about-page{
+    .about__container{
+        background-image: url('../src/images/bg-sobre.png') !important; 
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        .about__heading{
+            h1{
+                color: #fff;
+                font-family: $primaryFont;
+                font-weight: 700;
+                font-size: 62px;
+                padding-bottom: 30px;
+            }
+        }
+        .about__tabs{
+            display: flex;
+            height: 410px;
+            .tab{
+                display: flex;
+                flex-direction: column;
+                padding-right: 90px;
+                button{
+                    background-color: transparent;
+                    border: none;
+                    color: #fff;
+                    font-family: $primaryFont;
+                    font-weight: 700;
+                    font-size: 32px;
+                    padding-bottom: 28px;
+                    transition: 0.2s;
+                }
+                .active{
+                    color: #fff;
+                    font-family: $primaryFont;
+                    font-weight: 700;
+                    transform: scale(1.2);
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 80px;
+                        height: 2px;
+                        background-color: #fff;
+                        bottom: 30px;
+                        left: 5px;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        bottom: 22px;
+                        right:  -40px;
+                    }
+                }
+            }
+            .tabcontent{
+                display: none !important;
+       
+                
+                h3{
+                    color: #fff;
+                    font-family: $primaryFont;
+                    font-weight: 700;
+                    font-size: 32px;
+                }
+                p{
+                    color: #fff;
+                    font-family: $primaryFont;
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+            }
+        }
+    } 
+}
+@media(max-width:978px){
+    .about__container{
+        .about__blocks{  
+            margin-top: 20px;
+            .about__block{
+                width: 100%;
+                margin-top: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.projects__container{
+    .taboffice{
+        height: 410px;
+        .area__carousel,.owl-stage-outer {
+            height: 100%;
+        }
+
+    }
+    .tabcontent{
+        display: none ;
+    }
+    .tab{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .active{
+            background-color: #4a0000;
+            color: #fff;
+        }
+        button{
+            margin-bottom: 10px;
+            width: 50%;
+            padding: 10px 0;
+            background-color: #fff;
+            border: 1px solid #1f1f1f;
+            font-family: $primaryFont;
+            color: $primaryColor;
+            font-weight: 600;
+        }
+    }
+    .about__tabs{
+        .tabcontent{
+            .owl-dots{
+                margin-top: 40px !important;
+                position: relative;
+                button{
+                    margin-right: 20px;
+                    span{
+                        color: transparent !important;
+                        border: none;
+                        opacity: 0;
+                    }
+                    height: 15px !important;
+                    width: 15px !important;
+                    background-color: #fff !important;
+                    opacity: 1 !important;
+                    transform: rotate(45deg);
+                }
+                .active{
+                    background-color: #4a0000 !important;
+                }
+            }
+        }
+    }
+}
