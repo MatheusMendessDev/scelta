@@ -5,3 +5,4 @@ Disallow: /dist/*.map
 
 Sitemap: https://sceltaplanejados.com.br/sitemap.xml
 
+
